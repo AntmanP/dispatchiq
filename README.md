@@ -6,7 +6,7 @@
 ---
 
 ## 🎬 Demo Video
-*[Link to your video here]*
+*[Link to video here]*
 
 ---
 
