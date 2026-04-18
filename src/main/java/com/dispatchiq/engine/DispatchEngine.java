@@ -60,7 +60,7 @@ public class DispatchEngine {
         this.metrics = metrics;
         this.workerPool = Executors.newScheduledThreadPool(WORKER_COUNT, r -> {
             Thread t = new Thread(r);
-            t.setName("dispatch-worker-" + t.threadId());
+            t.setName("dispatch-worker-" + t.getId());
             t.setDaemon(true);
             return t;
         });

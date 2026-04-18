@@ -61,7 +61,7 @@ public class DriverRegistry {
      */
     public void scheduleTripCompletion(Driver driver, double distanceKm) {
         // Simulate trip time: ~30 seconds base + distance factor
-        long tripDurationSeconds = (long) (30 + distanceKm * 100);
+        long tripDurationSeconds = (long) (8 + distanceKm * 20);
         Instant tripEnd = Instant.now().plusSeconds(tripDurationSeconds);
         driver.setTripEndTime(tripEnd);
     }

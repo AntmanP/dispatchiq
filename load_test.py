@@ -90,7 +90,7 @@ def print_metrics(m: dict):
 def run_load_test(num_riders: int, delay_between_waves: float):
     print(f"\n{'='*60}")
     print(f"  DispatchIQ Load Test")
-    print(f"  Riders: {num_riders} | Workers in system: 5 | Queue cap: 500")
+    print(f"  Riders: {num_riders} | Workers in system: 5 | Drivers: 100 | Queue cap: 500")
     print(f"{'='*60}\n")
 
     print("📊 Metrics BEFORE load test:")
@@ -133,7 +133,7 @@ def run_load_test(num_riders: int, delay_between_waves: float):
 
     # Watch the system drain in real time
     print("⏳ Watching system drain (metrics every 3 seconds)...\n")
-    for i in range(10):
+    for i in range(40):
         time.sleep(3)
         m = fetch_metrics()
         print(f"[t+{(i+1)*3}s]")

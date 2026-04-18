@@ -30,7 +30,7 @@ public class DataInitializer {
         String[] lastNames = {"Smith", "Johnson", "Williams", "Brown", "Jones",
                               "Garcia", "Miller", "Davis", "Wilson", "Moore"};
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 100; i++) {
             String name = firstNames[i % firstNames.length] + " " + lastNames[i % lastNames.length];
             Location location = new Location(
                 random.nextDouble(),   // lat between 0.0 and 1.0
