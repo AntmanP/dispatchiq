@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+dispatch:
+  queue:
+    capacity: 100          # max pending requests before backpressure kicks in
+  workers:
+    count: 5               # fixed thread pool size - simulating limited servers
+  batch:
+    size: 10               # max requests matched per batch cycle
+    interval-ms: 300       # how often the batch matcher runs (milliseconds)
+  trip:
+    min-duration-ms: 5000  # min time a driver is ON_TRIP
+    max-duration-ms: 15000 # max time a driver is ON_TRIP
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.dispatchiq: INFO
